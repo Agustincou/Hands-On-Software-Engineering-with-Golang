@@ -206,7 +206,7 @@ func (b *broadcast) Run(ctx context.Context, params StageParams) {
 		}(i)
 	}
 
-done:
+done: //etiqueta que justo antes de un bucle, lo etiqueta. Para hacer break done y salir del bucle por más anidado que esté
 	for {
 		// Read incoming payloads and pass them to each FIFO
 		select {
